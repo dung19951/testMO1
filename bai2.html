@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let array = [1, 7, 6, 8, 5, 4, 3];
+    let x = +prompt('nhập số x');
+
+    function tryRemoveFromArray(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (x == arr[i]) {
+                arr.splice(i, 1);
+            }
+        }
+        return arr;
+    }
+
+    document.write(tryRemoveFromArray(array));
+</script>
+</script>
+</body>
+</html>
