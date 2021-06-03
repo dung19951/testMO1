@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<canvas id="canvas1" width="500px"height="400px" style="border: 1px solid #000000;">
+
+</canvas>
+<script>
+  let canvas=document.getElementById('canvas1')
+  let pen=canvas.getContext("2d")
+  class Circle{
+    constructor(x,y,radius,color) {
+      this.x=x;
+      this.y=y;
+      this.radius=radius;
+      this.color=color;
+    }
+    render(canvas){
+      pen.beginPath();
+      pen.arc(this.x,this.y,this.radius,0,2*Math.PI);
+      pen.fillStyle=this.color;
+      pen.fill();
+    }
+  }
+  let circle=new Circle(10,10,100,"#000000")
+  circle.render()
+</script>
+</body>
+</html>
